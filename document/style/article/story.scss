@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.story {
+  break-before: left;
+  page: lesson;
+}

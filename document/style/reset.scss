@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  margin: unset;
+  padding: unset;
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  color: unset;
+  text-decoration: unset;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  widows: 1;
+  orphans: 1;
+}
+
+body {
+  line-height: 1;
+}

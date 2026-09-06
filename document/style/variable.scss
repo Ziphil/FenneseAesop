@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+
+$page-width: 148mm;
+$page-height: 210mm;
+
+$page-margin-top: 48q;
+$page-margin-bottom: 68q;
+$page-margin-inner: 88q;
+$page-margin-outer: 56q;
+
+$page-block-gap: 32q;
+$bleed-size: 12q;
+
+$border-width: 0.8q;
+
+$line-height: 1.5;
+$sentence-line-height: 1.2;
+$narrow-line-height: 1.2;
+
+$dark-color: hsl(0, 0%, 50%);
+$pale-dark-color: hsl(0, 0%, 80%);
+$light-color: hsl(0, 0%, 90%);
+
+$serif-font-family: "Noto Serif", "源ノ明朝", serif;
+$sans-font-family: "Noto Sans", "源ノ角ゴシック", sans-serif;
+$special-font-family: "Ysabeau";
+
+$skew-degree: 30deg;

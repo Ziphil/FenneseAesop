@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.sans {
+  font-family: $sans-font-family;
+}
+
+.japanese {
+  font-family: "源ノ明朝", serif;
+}

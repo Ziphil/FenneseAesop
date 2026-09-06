@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+@use "./variable.scss" as *;
+
+
+@page {
+  size: $page-width $page-height;
+  bleed: 0q;
+}
+
+@page :left {
+  margin-block-start: $page-margin-top;
+  margin-block-end: $page-margin-bottom;
+  margin-inline-start: $page-margin-outer;
+  margin-inline-end: $page-margin-inner;
+  @bottom-left {
+    content: element(page-left);
+  }
+}
+
+@page :right {
+  margin-block-start: $page-margin-top;
+  margin-block-end: $page-margin-bottom;
+  margin-inline-start: $page-margin-inner;
+  margin-inline-end: $page-margin-outer;
+  @bottom-right {
+    content: element(page-right);
+  }
+}
+
+html {
+  font-size: 12q;
+  font-family: $serif-font-family;
+  font-feature-settings: "lnum" 1;
+  color: black;
+  text-spacing-trim: trim-auto;
+}
+
+.page {
+  width: calc(100vw + $page-margin-inner + $page-margin-outer);
+  height: $page-margin-bottom;
+  padding-block-start: $page-block-gap;
+  display: flex;
+  flex-direction: column;
+  &[data-position="left"] {
+    margin-inline-start: - $page-margin-outer;
+    margin-inline-end: - $page-margin-inner;
+    align-items: flex-start;
+    position: running(page-left);
+  }
+  &[data-position="right"] {
+    margin-inline-start: - $page-margin-inner;
+    margin-inline-end: - $page-margin-outer;
+    align-items: flex-end;
+    position: running(page-right);
+  }
+}
+
+.page-number {
+  width: 18q;
+  padding-block-start: 2q;
+  font-size: 14q;
+  font-family: $special-font-family;
+  border-block-start: solid $border-width $dark-color;
+  box-sizing: content-box;
+  &[data-position="left"] {
+    padding-inline-start: $page-margin-outer;
+    padding-inline-end: 4q;
+    text-align: end;
+  }
+  &[data-position="right"] {
+    padding-inline-end: $page-margin-outer;
+    padding-inline-start: 4q;
+    text-align: start;
+  }
+  &::before {
+    content: counter(page);
+  }
+}

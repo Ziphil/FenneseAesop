@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.sentence {
+  margin-block-start: 18q;
+  break-inside: avoid;
+}
+
+.sentence-translation {
+  margin-block-start: 12q;
+  font-size: 12q;
+  font-weight: 500;
+}
+
+.gloss {
+  column-gap: 12q;
+  display: grid;
+  grid-template-columns: 20q 1fr;
+}
+
+.gloss-number {
+  padding-block-start: 7q;
+  font-size: 12.5q;
+  font-family: $special-font-family;
+  color: white;
+  background-color: $dark-color;
+  text-align: center;
+}
+
+.gloss-content {
+  word-spacing: 0.75em;
+}
+
+.gloss-word {
+  margin-block: 6q;
+  line-height: 1;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.gloss-spelling {
+  font-size: 14q;
+  font-weight: 500;
+}
+
+.gloss-pronunciation {
+  margin-block-start: 4q;
+  font-size: 9q;
+  letter-spacing: -0.1em;
+}
+
+.gloss-category {
+  margin-block-start: 6q;
+  font-size: 8q;
+}
+
+.gloss-annotation {
+  margin-block-start: 2q;
+  font-size: 8q;
+}
+
+.gloss-japanese {
+  margin-block-start: 6q;
+  font-size: 12q;
+  font-weight: 500;
+}
