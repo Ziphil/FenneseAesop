@@ -37,22 +37,21 @@ html {
 }
 
 .page {
-  width: calc(100vw + $page-margin-inner + $page-margin-outer);
+  width: calc(100vw + $page-margin-inner + $page-margin-outer + $bleed-size);
   height: $page-margin-bottom;
   padding-block-start: $page-block-gap;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
   &[data-position="left"] {
-    margin-inline-start: - $page-margin-outer;
+    margin-inline-start: - ($page-margin-outer + $bleed-size);
     margin-inline-end: - $page-margin-inner;
-    align-items: flex-start;
-    position: running(page-left);
+    flex-direction: row;
   }
   &[data-position="right"] {
-    margin-inline-start: - $page-margin-inner;
-    margin-inline-end: - $page-margin-outer;
-    align-items: flex-end;
-    position: running(page-right);
+    margin-inline-end: - ($page-margin-outer + $bleed-size);
+    margin-inline-start: - $page-margin-outer;
+    flex-direction: row-reverse;
   }
 }
 
@@ -61,19 +60,35 @@ html {
   padding-block-start: 2q;
   font-size: 14q;
   font-family: $special-font-family;
+  font-variant: oldstyle-nums;
   border-block-start: solid $border-width $dark-color;
   box-sizing: content-box;
   &[data-position="left"] {
-    padding-inline-start: $page-margin-outer;
+    padding-inline-start: $page-margin-outer + $bleed-size;
     padding-inline-end: 4q;
     text-align: end;
   }
   &[data-position="right"] {
-    padding-inline-end: $page-margin-outer;
+    padding-inline-end: $page-margin-outer + $bleed-size;
     padding-inline-start: 4q;
     text-align: start;
   }
   &::before {
     content: counter(page);
+  }
+}
+
+.page-title {
+  display: flex;
+  &[data-position="left"] {
+    flex-direction: row;
+  }
+  &[data-position="right"] {
+    flex-direction: row-reverse;
+  }
+  &::before {
+    margin-inline: 4q;
+    color: $dark-color;
+    content: "·"
   }
 }

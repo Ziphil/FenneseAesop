@@ -6,5 +6,74 @@
 
 .story {
   break-before: left;
-  page: lesson;
+  page: story;
+}
+
+.story-heading {
+  margin-inline-start: - ($page-margin-outer + $bleed-size + 64q);
+  padding-inline-start: $page-margin-outer + $bleed-size + 64q;
+  padding-block: 12q;
+  margin-block-end: 48q;
+  column-gap: 12q;
+  color: white;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  &::before {
+    inset: 0q;
+    background-color: $dark-color;
+    position: absolute;
+    transform: skew(-9deg, 0deg);
+    z-index: -1;
+    content: "";
+  }
+}
+
+.story-heading-number {
+  font-size: 36q;
+  font-family: $special-font-family;
+}
+
+.story-heading-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-heading-title-fennese {
+  padding-inline-start: 4q;
+  font-size: 24q;
+  font-family: $special-font-family;
+  font-weight: 700;
+}
+
+.story-heading-title-japanese {
+  margin-block-start: 8q;
+  padding-block-start: 6q;
+  padding-inline-start: 4q;
+  font-size: 14q;
+  font-weight: 700;
+  border-block-start: $border-width solid oklch(from white l c h / 0.5);
+}
+
+.page[data-article="story"] {
+  &[data-position="left"] {
+    position: running(story-left);
+  }
+  &[data-position="right"] {
+    position: running(story-right);
+  }
+}
+
+@page story:left {
+  @bottom-left {
+    content: element(story-left);
+  }
+}
+
+@page story:right {
+  @bottom-right {
+    content: element(story-right);
+  }
 }
