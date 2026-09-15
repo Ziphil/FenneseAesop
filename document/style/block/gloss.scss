@@ -18,12 +18,12 @@
 .gloss {
   column-gap: 12q;
   display: grid;
-  grid-template-columns: 20q 1fr;
+  grid-template-columns: 18q 1fr;
 }
 
 .gloss-number {
-  padding-block-start: 7q;
-  font-size: 12.5q;
+  padding-block-start: 7.5q;
+  font-size: 12q;
   font-family: $special-font-family;
   color: white;
   background-color: $dark-color;
