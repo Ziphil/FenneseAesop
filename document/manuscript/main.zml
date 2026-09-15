@@ -5,5 +5,6 @@
 \root<
 
   &import|src="document/manuscript/story/1-story.zml"|;
+  &import|src="document/manuscript/story/2-story.zml"|;
 
 >
