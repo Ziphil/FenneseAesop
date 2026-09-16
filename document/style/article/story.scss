@@ -25,7 +25,7 @@
     inset: 0q;
     background-color: $dark-color;
     position: absolute;
-    transform: skew(-9deg, 0deg);
+    transform: skew($skew-degree, 0deg);
     z-index: -1;
     content: "";
   }

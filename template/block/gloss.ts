@@ -9,12 +9,12 @@ manager.registerElementRule("sentence", "story", (transformer, document, element
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("sentence");
-    self.appendChild(transformer.apply(element, "story.sentence"));
+    self.appendChild(transformer.apply(element, "sentence"));
   });
   return self;
 });
 
-manager.registerElementRule("ja", "story.sentence", (transformer, document, element) => {
+manager.registerElementRule("ja", "sentence", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
     self.addClassName("sentence-translation");
@@ -23,7 +23,7 @@ manager.registerElementRule("ja", "story.sentence", (transformer, document, elem
   return self;
 });
 
-manager.registerElementRule("gloss", "story.sentence", (transformer, document, element) => {
+manager.registerElementRule("gloss", "sentence", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const number = element.parentNode!.searchXpath("preceding-sibling::sentence").length + 1;
   self.appendElement("div", (self) => {
@@ -34,17 +34,17 @@ manager.registerElementRule("gloss", "story.sentence", (transformer, document, e
     });
     self.appendElement("div", (self) => {
       self.addClassName("gloss-content");
-      self.appendChild(transformer.apply(element, "story.sentence.gloss"));
+      self.appendChild(transformer.apply(element, "sentence.gloss"));
     });
   });
   return self;
 });
 
-manager.registerElementRule("li", "story.sentence.gloss", (transformer, document, element) => {
+manager.registerElementRule("li", "sentence.gloss", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("gloss-word");
-    self.appendChild(transformer.apply(element, "story.sentence.gloss.li"));
+    self.appendChild(transformer.apply(element, "sentence.gloss.li"));
   });
   return self;
 });
@@ -57,21 +57,21 @@ const GLOSS_CLASS_NAMES = new Map<string, string>([
   ["ja", "gloss-japanese"]
 ]);
 
-manager.registerElementRule(["sh", "pr", "ct", "an", "ja"], "story.sentence.gloss.li", (transformer, document, element) => {
+manager.registerElementRule(["sh", "pr", "ct", "an", "ja"], "sentence.gloss.li", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const className = GLOSS_CLASS_NAMES.get(element.tagName) ?? "";
   self.appendElement("span", (self) => {
     self.addClassName(className);
-    self.appendChild(transformer.apply(element, "story.sentence"));
+    self.appendChild(transformer.apply(element, "sentence"));
   });
   return self;
 });
 
-manager.registerElementRule("focus", "story.sentence.gloss", (transformer, document, element) => {
+manager.registerElementRule("focus", "sentence.gloss", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("gloss-focus");
-    self.appendChild(transformer.apply(element, "story.sentence.gloss"));
+    self.appendChild(transformer.apply(element, "sentence.gloss"));
   });
   return self;
 });

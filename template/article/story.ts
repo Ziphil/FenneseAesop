@@ -24,7 +24,7 @@ manager.registerElementFactory("story-heading", (transformer, document, element,
   const self = document.createDocumentFragment();
   const number = args.number;
   const titleElement = element.searchXpath("title")[0] as Element;
-  self.appendElement("h1", (self) => {
+  self.appendElement("hgroup", (self) => {
     self.addClassName("story-heading");
     self.appendElement("div", (self) => {
       self.addClassName("story-heading-number");
@@ -40,7 +40,7 @@ manager.registerElementFactory("story-heading", (transformer, document, element,
 
 manager.registerElementRule("sh", "story.heading", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  self.appendElement("div", (self) => {
+  self.appendElement("h1", (self) => {
     self.addClassName("story-heading-title-fennese");
     self.appendChild(transformer.apply(element, "story"));
   });

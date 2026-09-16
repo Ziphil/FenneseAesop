@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.section {
+  &:not(:first-child) {
+    margin-block-start: 32q;
+  }
+}
+
+.section-title {
+  margin-inline: -8q;
+  padding-inline: 8q;
+  padding-block: 6q;
+  margin-block-end: 12q;
+  font-size: 16q;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  &::before {
+    inset: 0q;
+    background-color: $dark-color;
+    transform: skew($skew-degree, 0deg);
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
+}

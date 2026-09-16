@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.paragraph {
+  margin-block: 8q;
+  line-height: $line-height;
+  text-align: justify;
+}
