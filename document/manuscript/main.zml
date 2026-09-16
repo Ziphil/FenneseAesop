@@ -4,7 +4,8 @@
 
 \root<
 
-  &import|src="document/manuscript/story/1-story.zml"|;
-  &import|src="document/manuscript/story/2-story.zml"|;
+  &import|src="document/manuscript/story/hare-turtoise.zml"|;
+  &import|src="document/manuscript/explanation/hare-turtoise.zml"|;
+  &import|src="document/manuscript/story/lying-shepherd.zml"|;
 
 >
