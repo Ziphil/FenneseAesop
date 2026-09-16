@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+$description-dash-width: 13q;
+
+.description-list {
+  line-height: $line-height;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.description-left {
+  margin-inline-start: $bullet-width + $blank-margin;
+  margin-inline-end: $blank-margin;
+  &::before {
+    width: $bullet-width;
+    margin-inline-end: $blank-margin;
+    margin-inline-start: - ($bullet-width + $blank-margin);
+    background-color: $dark-color;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    aspect-ratio: 1 / calc(2 / sqrt(3));
+    translate: 25% -6.25%;
+    display: inline-block;
+    content: "";
+  }
+}
+
+.description-right {
+  margin-inline-start: $description-dash-width + $blank-margin;
+  &::before {
+    width: $description-dash-width;
+    margin-inline-end: $blank-margin;
+    margin-inline-start: - ($description-dash-width + $blank-margin);
+    color: $dark-color;
+    display: inline-block;
+    content: "—";
+  }
+}

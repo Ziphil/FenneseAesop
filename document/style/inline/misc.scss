@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.box {
+  width: 1.125em;
+  height: 1.125em;
+  margin-inline: 0.125em;
+  color: white;
+  background-color: $dark-color;
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-inner {
+  font-size: 11q;
+  font-family: $special-font-family;
+}
