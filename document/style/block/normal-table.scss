@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.normal-table {
+  margin-block: 10q;
+  margin-inline: auto;
+  line-height: $line-height;
+  border-collapse: collapse;
+  border-block-start: solid $border-width $dark-color;
+  border-block-end: solid $border-width $dark-color;
+  break-inside: avoid;
+}
+
+.normal-table tr:nth-child(1) {
+  border-block-end: solid $border-width $dark-color;
+}
+
+.normal-table th,
+.normal-table td {
+  padding-inline: 8q;
+  text-align: start;
+}

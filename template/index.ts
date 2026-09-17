@@ -4,6 +4,7 @@ import articleExplanationManager from "./article/explanation";
 import articleLessonManager from "./article/story";
 import blockDescriptionListManager from "./block/description-list";
 import blockGlossManager from "./block/gloss";
+import blockNormalTableManager from "./block/normal-table";
 import blockParagraphManager from "./block/paragraph";
 import blockSectionManager from "./block/section";
 import fallbackManager from "./fallback";
@@ -22,6 +23,7 @@ const managers = [
   blockSectionManager,
   blockParagraphManager,
   blockDescriptionListManager,
+  blockNormalTableManager,
   inlineCommonManager,
   inlineBasicManager,
   inlineMiscManager,
