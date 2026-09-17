@@ -57,12 +57,30 @@ const GLOSS_CLASS_NAMES = new Map<string, string>([
   ["ja", "gloss-japanese"]
 ]);
 
-manager.registerElementRule(["sh", "pr", "ct", "an", "ja"], "sentence.gloss.li", (transformer, document, element) => {
+manager.registerElementRule(["sh", "pr", "ct", "ja"], "sentence.gloss.li", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const className = GLOSS_CLASS_NAMES.get(element.tagName) ?? "";
   self.appendElement("span", (self) => {
     self.addClassName(className);
     self.appendChild(transformer.apply(element, "sentence"));
+  });
+  return self;
+});
+
+manager.registerElementRule("an", "sentence.gloss.li", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const className = GLOSS_CLASS_NAMES.get(element.tagName) ?? "";
+  self.appendElement("span", (self) => {
+    self.addClassName(className);
+    const splitParts = element.textContent!.split(/(·|\.)/);
+    for (const part of splitParts) {
+      self.appendElement("span", (self) => {
+        if (part === "·" || part === ".") {
+          self.addClassName("gloss-annotation-separator");
+        }
+        self.appendTextNode(part);
+      });
+    }
   });
   return self;
 });

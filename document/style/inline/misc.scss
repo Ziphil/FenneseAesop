@@ -8,9 +8,11 @@
   width: 1.125em;
   height: 1.125em;
   margin-inline: 0.125em;
+  padding-block-end: 0.125em;
   color: white;
   background-color: $dark-color;
-  aspect-ratio: 1 / 1;
+  line-height: 1;
+  translate: 0em -0.0625em;
   display: inline-flex;
   align-items: center;
   justify-content: center;

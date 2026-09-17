@@ -5,9 +5,8 @@
 
 
 .section {
-  &:not(:first-child) {
-    margin-block-start: 32q;
-  }
+  break-before: page;
+  margin-block-end: 24q;
 }
 
 .section-title {

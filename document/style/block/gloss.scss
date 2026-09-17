@@ -10,9 +10,10 @@
 }
 
 .sentence-translation {
-  margin-block-start: 12q;
+  margin-block-start: 8q;
   font-size: 12q;
   font-weight: 500;
+  line-height: $line-height;
 }
 
 .gloss {
@@ -37,6 +38,7 @@
 .gloss-word {
   margin-block: 6q;
   line-height: 1;
+  word-spacing: normal;
   display: inline-flex;
   flex-direction: column;
 }
@@ -48,18 +50,23 @@
 
 .gloss-pronunciation {
   margin-block-start: 4q;
-  font-size: 9q;
+  font-size: 10q;
   letter-spacing: -0.1em;
 }
 
 .gloss-category {
   margin-block-start: 6q;
-  font-size: 8q;
+  font-size: 9q;
 }
 
 .gloss-annotation {
-  margin-block-start: 2q;
-  font-size: 8q;
+  margin-block-start: 3q;
+  font-size: 9q;
+}
+
+.gloss-annotation-separator {
+  margin-inline: 0.0625em;
+  color: $dark-color;
 }
 
 .gloss-japanese {

@@ -24,6 +24,7 @@ manager.registerElementRule(true, true, (transformer, document) => {
 manager.registerTextRule(true, (transformer, document, text) => {
   let content = text.data;
   content = content.replace(/\uFEFF/gu, "");
+  content = content.replace(/(、|。)\s*/gu, "$1");
   const self = document.createTextNode(content);
   return self;
 });
