@@ -7,6 +7,10 @@
   &import|src="document/manuscript/story/hare-turtoise.zml"|;
   &import|src="document/manuscript/explanation/hare-turtoise.zml"|;
   &import|src="document/manuscript/story/lying-shepherd.zml"|;
+  &import|src="document/manuscript/explanation/lying-shepherd.zml"|;
+  &import|src="document/manuscript/story/dog-reflection.zml"|;
+  &import|src="document/manuscript/explanation/dog-reflection.zml"|;
   &import|src="document/manuscript/story/north-wind-sun.zml"|;
+  &import|src="document/manuscript/explanation/north-wind-sun.zml"|;
 
 >
