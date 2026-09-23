@@ -16,9 +16,18 @@ manager.registerElementRule("sentence", "story", (transformer, document, element
 
 manager.registerElementRule("ja", "sentence", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  self.appendElement("div", (self) => {
+  self.appendElement("p", (self) => {
     self.addClassName("sentence-translation");
     self.appendChild(transformer.apply(element, "story"));
+  });
+  return self;
+});
+
+manager.registerElementRule("supl", "sentence", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("p", (self) => {
+    self.addClassName("sentence-supplement");
+    self.appendChild(transformer.apply(element, "sentence"));
   });
   return self;
 });

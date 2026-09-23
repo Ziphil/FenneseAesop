@@ -5,7 +5,7 @@
 
 
 .sentence {
-  margin-block-start: 18q;
+  margin-block-start: 20q;
   break-inside: avoid;
 }
 
@@ -14,6 +14,16 @@
   font-size: 12q;
   font-weight: 500;
   line-height: $line-height;
+  text-align: justify;
+}
+
+.sentence-supplement {
+  margin-block-start: 6q;
+  padding-inline-start: 8q;
+  font-size: 11q;
+  line-height: $small-line-height;
+  border-inline-start: solid $border-width $dark-color;
+  text-align: justify;
 }
 
 .gloss {
