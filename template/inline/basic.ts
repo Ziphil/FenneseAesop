@@ -36,4 +36,26 @@ manager.registerElementRule("u", true, (transformer, document, element) => {
   return self;
 });
 
+const GENERAL_DIACRITICS = new Map([["a", "ˊ"], ["g", "ˋ"], ["c", "ˆ"]]);
+
+manager.registerElementRule("d", true, (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const type = (element.getAttribute("g") || element.getAttribute("t")) ?? "";
+  self.appendElement("span", (self) => {
+    self.addClassName("diacritic");
+    self.appendElement("span", (self) => {
+      self.addClassName("diacritic-char");
+      self.appendChild(transformer.apply(element));
+    });
+    if (element.hasAttribute("t")) {
+      self.appendElement("span", (self) => {
+        self.addClassName("diacritic-mark");
+        self.setAttribute("data-position", "above");
+        self.appendTextNode(GENERAL_DIACRITICS.get(type) ?? "");
+      });
+    }
+  });
+  return self;
+});
+
 export default manager;
