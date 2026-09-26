@@ -46,7 +46,7 @@
 }
 
 .gloss-word {
-  margin-block: 6q;
+  margin-block: 8q;
   line-height: 1;
   word-spacing: normal;
   display: inline-flex;
@@ -59,19 +59,21 @@
 }
 
 .gloss-pronunciation {
-  margin-block-start: 4q;
-  font-size: 10q;
-  letter-spacing: -0.1em;
+  margin-block-start: 6q;
+  --font-size: 11q;
+  @include condensed(0.75);
 }
 
 .gloss-category {
-  margin-block-start: 6q;
-  font-size: 9q;
+  margin-block-start: 7q;
+  --font-size: 10q;
+  @include condensed(0.75);
 }
 
 .gloss-annotation {
-  margin-block-start: 3q;
-  font-size: 9q;
+  margin-block-start: 4q;
+  --font-size: 10q;
+  @include condensed(0.75);
 }
 
 .gloss-annotation-separator {
@@ -80,7 +82,7 @@
 }
 
 .gloss-japanese {
-  margin-block-start: 6q;
+  margin-block-start: 7q;
   font-size: 12q;
   font-weight: 500;
 }

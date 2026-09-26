@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@use "sass:math" as *;
+
 
 $page-width: 148mm;
 $page-height: 210mm;
@@ -29,3 +31,11 @@ $sans-font-family: "Noto Sans", "源ノ角ゴシック", sans-serif;
 $special-font-family: "Ysabeau";
 
 $skew-degree: -9deg;
+
+
+@mixin condensed($ratio) {
+  font-size: calc(var(--font-size) * #{$ratio});
+  line-height: calc(var(--font-size));
+  scale: 1 div(1, $ratio);
+  display: inline-block;
+}
