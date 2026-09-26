@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.text {
+  padding-block-start: 10q;
+  padding-block-end: 12q;
+  padding-inline: 16q;
+  margin-inline: -16q;
+  background-color: $light-color;
+  break-inside: avoid;
+  break-after: page;
+}
+
+.text-fennese {
+  font-size: 14q;
+  font-weight: 500;
+  line-height: $line-height;
+  text-align: justify;
+}
+
+.text-fennese .text-paragraph {
+  &:not(:first-child) {
+    margin-block-start: 6q;
+  }
+}
+
+.text-japanese {
+  margin-block-start: 12q;
+  padding-block-start: 10q;
+  font-size: 12q;
+  font-weight: 500;
+  line-height: $line-height;
+  border-block-start: $border-width solid oklch(from $dark-color l c h / 0.5);
+  text-align: justify;
+}
+
+.text-japanese .text-paragraph {
+  &:not(:first-child) {
+    margin-block-start: 6q;
+  }
+}

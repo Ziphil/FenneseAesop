@@ -11,9 +11,10 @@
 
 .story-heading {
   margin-inline-start: - ($page-margin-outer + $bleed-size + 64q);
+  margin-inline-end: -16q;
   padding-inline-start: $page-margin-outer + $bleed-size + 64q;
   padding-block: 12q;
-  margin-block-end: 48q;
+  margin-block-end: 40q;
   column-gap: 12q;
   color: white;
   display: grid;
