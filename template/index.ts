@@ -11,6 +11,7 @@ import blockNormalTableManager from "./block/normal-table";
 import blockParagraphManager from "./block/paragraph";
 import blockSectionManager from "./block/section";
 import blockTextManager from "./block/text";
+import blockTitleManager from "./block/title";
 import fallbackManager from "./fallback";
 import inlineBasicManager from "./inline/basic";
 import inlineCommonManager from "./inline/common";
@@ -32,6 +33,7 @@ const managers = [
   blockDescriptionListManager,
   blockNormalTableManager,
   blockContentTableManager,
+  blockTitleManager,
   inlineCommonManager,
   inlineBasicManager,
   inlineMiscManager,

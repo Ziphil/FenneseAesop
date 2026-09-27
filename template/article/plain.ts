@@ -13,7 +13,7 @@ manager.registerElementRule("plain", "root", (transformer, document, element) =>
       self.setAttribute("id", element.getAttribute("id")!);
     }
     self.appendChild(transformer.call("plain-page", element, "plain"));
-    if (element.searchXpath("title")[0]) {
+    if (element.searchXpath("heading")[0]) {
       self.appendChild(transformer.call("plain-heading", element, "plain"));
     }
     self.appendChild(transformer.apply(element, "plain"));
@@ -23,12 +23,12 @@ manager.registerElementRule("plain", "root", (transformer, document, element) =>
 
 manager.registerElementFactory("plain-heading", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const titleElement = element.searchXpath("title")[0] as Element;
+  const headingElement = element.searchXpath("heading")[0] as Element;
   self.appendElement("h1", (self) => {
     self.addClassName("plain-heading");
     self.appendElement("div", (self) => {
       self.addClassName("plain-heading-content");
-      self.appendChild(transformer.apply(titleElement, "plain.heading"));
+      self.appendChild(transformer.apply(headingElement, "plain.heading"));
     });
   });
   return self;
@@ -36,7 +36,7 @@ manager.registerElementFactory("plain-heading", (transformer, document, element)
 
 manager.registerElementFactory("plain-page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const titleElement = element.searchXpath("title")[0] as Element;
+  const headingElement = element.searchXpath("heading")[0] as Element;
   self.appendElement("footer", (self) => {
     self.addClassName("page");
     self.setAttribute("data-position", "left");
@@ -45,13 +45,13 @@ manager.registerElementFactory("plain-page", (transformer, document, element) =>
       self.addClassName("page-number");
       self.setAttribute("data-position", "left");
     });
-    if (titleElement) {
+    if (headingElement) {
       self.appendElement("div", (self) => {
         self.addClassName("page-title");
         self.setAttribute("data-position", "left");
         self.appendElement("div", (self) => {
           self.addClassName("page-title-inner");
-          self.appendChild(transformer.apply(titleElement, "plain"));
+          self.appendChild(transformer.apply(headingElement, "plain"));
         });
       });
     }
@@ -64,13 +64,13 @@ manager.registerElementFactory("plain-page", (transformer, document, element) =>
       self.addClassName("page-number");
       self.setAttribute("data-position", "right");
     });
-    if (titleElement) {
+    if (headingElement) {
       self.appendElement("div", (self) => {
         self.addClassName("page-title");
         self.setAttribute("data-position", "right");
         self.appendElement("div", (self) => {
           self.addClassName("page-title-inner");
-          self.appendChild(transformer.apply(titleElement, "plain"));
+          self.appendChild(transformer.apply(headingElement, "plain"));
         });
       });
     }

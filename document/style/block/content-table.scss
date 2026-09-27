@@ -37,7 +37,7 @@
 .content-table-story {
   column-gap: 12q;
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 20q 1fr;
   align-items: center;
 }
 
@@ -45,6 +45,7 @@
   font-size: 36q;
   font-family: $special-font-family;
   color: $dark-color;
+  text-align: center;
 }
 
 .content-table-story-content {

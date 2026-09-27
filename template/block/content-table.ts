@@ -16,8 +16,8 @@ manager.registerElementRule("content-table", "plain", (transformer, document, el
       const name = articleElement.tagName;
       if (name === "story") {
         const number = articleElement.searchXpath("preceding-sibling::story").length + 1;
-        const titleFenneseElement = articleElement.searchXpath("title/sh")[0] as Element;
-        const titleJapaneseElement = articleElement.searchXpath("title/ja")[0] as Element;
+        const headingFenneseElement = articleElement.searchXpath("heading/sh")[0] as Element;
+        const headingJapaneseElement = articleElement.searchXpath("heading/ja")[0] as Element;
         self.appendElement("li", (self) => {
           self.addClassName("content-table-item");
           self.appendElement("div", (self) => {
@@ -30,11 +30,11 @@ manager.registerElementRule("content-table", "plain", (transformer, document, el
               self.addClassName("content-table-story-content");
               self.appendElement("h1", (self) => {
                 self.addClassName("content-table-story-title-fennese");
-                self.appendChild(transformer.apply(titleFenneseElement, "story"));
+                self.appendChild(transformer.apply(headingFenneseElement, "story"));
               });
               self.appendElement("div", (self) => {
                 self.addClassName("content-table-story-title-japanese");
-                self.appendChild(transformer.apply(titleJapaneseElement, "story"));
+                self.appendChild(transformer.apply(headingJapaneseElement, "story"));
               });
             });
           });
@@ -45,14 +45,14 @@ manager.registerElementRule("content-table", "plain", (transformer, document, el
           });
         });
       } else if (name === "plain") {
-        const titleElement = articleElement.searchXpath("title")[0] as Element;
+        const headingElement = articleElement.searchXpath("heading")[0] as Element;
         self.appendElement("li", (self) => {
           self.addClassName("content-table-item");
           self.appendElement("div", (self) => {
             self.addClassName("content-table-plain");
             self.appendElement("div", (self) => {
               self.addClassName("content-table-plain-content");
-              self.appendChild(transformer.apply(titleElement, "plain"));
+              self.appendChild(transformer.apply(headingElement, "plain"));
             });
           });
           self.appendElement("div", (self) => {

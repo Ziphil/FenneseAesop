@@ -23,8 +23,8 @@ manager.registerElementRule("story", "root", (transformer, document, element) =>
 manager.registerElementFactory("story-heading", (transformer, document, element, scope, args) => {
   const self = document.createDocumentFragment();
   const number = args.number;
-  const titleFenneseElement = element.searchXpath("title/sh")[0] as Element;
-  const titleJapaneseElement = element.searchXpath("title/ja")[0] as Element;
+  const headingFenneseElement = element.searchXpath("heading/sh")[0] as Element;
+  const headingJapaneseElement = element.searchXpath("heading/ja")[0] as Element;
   self.appendElement("hgroup", (self) => {
     self.addClassName("story-heading");
     self.appendElement("div", (self) => {
@@ -35,11 +35,11 @@ manager.registerElementFactory("story-heading", (transformer, document, element,
       self.addClassName("story-heading-content");
       self.appendElement("h1", (self) => {
         self.addClassName("story-heading-title-fennese");
-        self.appendChild(transformer.apply(titleFenneseElement, "story"));
+        self.appendChild(transformer.apply(headingFenneseElement, "story"));
       });
       self.appendElement("div", (self) => {
         self.addClassName("story-heading-title-japanese");
-        self.appendChild(transformer.apply(titleJapaneseElement, "story"));
+        self.appendChild(transformer.apply(headingJapaneseElement, "story"));
       });
     });
   });
@@ -48,7 +48,7 @@ manager.registerElementFactory("story-heading", (transformer, document, element,
 
 manager.registerElementFactory("story-page", (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const titleElement = element.searchXpath("title/ja")[0] as Element;
+  const headingElement = element.searchXpath("heading/ja")[0] as Element;
   self.appendElement("footer", (self) => {
     self.addClassName("page");
     self.setAttribute("data-position", "left");
@@ -63,7 +63,7 @@ manager.registerElementFactory("story-page", (transformer, document, element) =>
       self.appendElement("div", (self) => {
         self.addClassName("page-title-inner");
         self.appendTextNode("『");
-        self.appendChild(transformer.apply(titleElement, "story"));
+        self.appendChild(transformer.apply(headingElement, "story"));
         self.appendTextNode("』");
       });
     });
@@ -82,7 +82,7 @@ manager.registerElementFactory("story-page", (transformer, document, element) =>
       self.appendElement("div", (self) => {
         self.addClassName("page-title-inner");
         self.appendTextNode("『");
-        self.appendChild(transformer.apply(titleElement, "story"));
+        self.appendChild(transformer.apply(headingElement, "story"));
         self.appendTextNode("』");
       });
     });

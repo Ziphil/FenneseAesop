@@ -3,7 +3,7 @@
 
 
 \plain|id="content-table"|<
-  \title<目次>
+  \heading<目次>
 
   \content-table;
 
