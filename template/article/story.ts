@@ -23,7 +23,8 @@ manager.registerElementRule("story", "root", (transformer, document, element) =>
 manager.registerElementFactory("story-heading", (transformer, document, element, scope, args) => {
   const self = document.createDocumentFragment();
   const number = args.number;
-  const titleElement = element.searchXpath("title")[0] as Element;
+  const titleFenneseElement = element.searchXpath("title/sh")[0] as Element;
+  const titleJapaneseElement = element.searchXpath("title/ja")[0] as Element;
   self.appendElement("hgroup", (self) => {
     self.addClassName("story-heading");
     self.appendElement("div", (self) => {
@@ -32,26 +33,15 @@ manager.registerElementFactory("story-heading", (transformer, document, element,
     });
     self.appendElement("div", (self) => {
       self.addClassName("story-heading-content");
-      self.appendChild(transformer.apply(titleElement, "story.heading"));
+      self.appendElement("h1", (self) => {
+        self.addClassName("story-heading-title-fennese");
+        self.appendChild(transformer.apply(titleFenneseElement, "story"));
+      });
+      self.appendElement("div", (self) => {
+        self.addClassName("story-heading-title-japanese");
+        self.appendChild(transformer.apply(titleJapaneseElement, "story"));
+      });
     });
-  });
-  return self;
-});
-
-manager.registerElementRule("sh", "story.heading", (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendElement("h1", (self) => {
-    self.addClassName("story-heading-title-fennese");
-    self.appendChild(transformer.apply(element, "story"));
-  });
-  return self;
-});
-
-manager.registerElementRule("ja", "story.heading", (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendElement("div", (self) => {
-    self.addClassName("story-heading-title-japanese");
-    self.appendChild(transformer.apply(element, "story"));
   });
   return self;
 });
@@ -70,7 +60,12 @@ manager.registerElementFactory("story-page", (transformer, document, element) =>
     self.appendElement("div", (self) => {
       self.addClassName("page-title");
       self.setAttribute("data-position", "left");
-      self.appendChild(transformer.apply(titleElement, "story"));
+      self.appendElement("div", (self) => {
+        self.addClassName("page-title-inner");
+        self.appendTextNode("『");
+        self.appendChild(transformer.apply(titleElement, "story"));
+        self.appendTextNode("』");
+      });
     });
   });
   self.appendElement("footer", (self) => {
@@ -84,11 +79,15 @@ manager.registerElementFactory("story-page", (transformer, document, element) =>
     self.appendElement("div", (self) => {
       self.addClassName("page-title");
       self.setAttribute("data-position", "right");
-      self.appendChild(transformer.apply(titleElement, "story"));
+      self.appendElement("div", (self) => {
+        self.addClassName("page-title-inner");
+        self.appendTextNode("『");
+        self.appendChild(transformer.apply(titleElement, "story"));
+        self.appendTextNode("』");
+      });
     });
   });
   return self;
 });
-
 
 export default manager;

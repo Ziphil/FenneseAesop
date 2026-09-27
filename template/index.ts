@@ -1,7 +1,10 @@
 //
 
+import articleBlankManager from "./article/blank";
 import articleExplanationManager from "./article/explanation";
+import articlePlainManager from "./article/plain";
 import articleLessonManager from "./article/story";
+import blockContentTableManager from "./block/content-table";
 import blockDescriptionListManager from "./block/description-list";
 import blockGlossManager from "./block/gloss";
 import blockNormalTableManager from "./block/normal-table";
@@ -20,12 +23,15 @@ const managers = [
   rootManager,
   articleLessonManager,
   articleExplanationManager,
+  articlePlainManager,
+  articleBlankManager,
   blockTextManager,
   blockGlossManager,
   blockSectionManager,
   blockParagraphManager,
   blockDescriptionListManager,
   blockNormalTableManager,
+  blockContentTableManager,
   inlineCommonManager,
   inlineBasicManager,
   inlineMiscManager,

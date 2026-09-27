@@ -4,6 +4,11 @@
 
 \root<
 
+  \blank;
+
+  \blank;
+  &import|src="document/manuscript/plain/content-table.zml"|;
+
   &import|src="document/manuscript/story/hare-turtoise.zml"|;
   &import|src="document/manuscript/explanation/hare-turtoise.zml"|;
 

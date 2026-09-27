@@ -4,12 +4,15 @@
 @use "page.scss";
 @use "article/story.scss";
 @use "article/explanation.scss";
+@use "article/plain.scss";
+@use "article/blank.scss";
 @use "block/text.scss";
 @use "block/gloss.scss";
 @use "block/section.scss";
 @use "block/paragraph.scss";
 @use "block/description-list.scss";
 @use "block/normal-table.scss";
+@use "block/content-table.scss";
 @use "inline/common.scss";
 @use "inline/basic.scss";
 @use "inline/misc.scss";

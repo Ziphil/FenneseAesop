@@ -47,11 +47,13 @@ html {
     margin-inline-start: - ($page-margin-outer + $bleed-size);
     margin-inline-end: - $page-margin-inner;
     flex-direction: row;
+    position: running(page-left);
   }
   &[data-position="right"] {
     margin-inline-end: - ($page-margin-outer + $bleed-size);
     margin-inline-start: - $page-margin-outer;
     flex-direction: row-reverse;
+    position: running(page-right);
   }
 }
 
@@ -83,12 +85,19 @@ html {
   display: flex;
   &[data-position="left"] {
     flex-direction: row;
+    &::before {
+      margin-inline-start: 4q;
+      margin-inline-end: 6q;
+    }
   }
   &[data-position="right"] {
     flex-direction: row-reverse;
+    &::before {
+      margin-inline-end: 4q;
+      margin-inline-start: 6q;
+    }
   }
   &::before {
-    margin-inline: 4q;
     color: $dark-color;
     content: "·"
   }

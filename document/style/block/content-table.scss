@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.content-table {
+  row-gap: 28q;
+  display: grid;
+  grid-template-columns: 1fr 28q;
+}
+
+.content-table-item {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  align-items: center;
+}
+
+.content-table-page {
+  font-size: 18q;
+  font-family: $special-font-family;
+  font-variant: oldstyle-nums;
+  text-align: end;
+  position: relative;
+  &[data-type="story"] {
+    translate: 0q 3q;
+  }
+  &[data-type="plain"] {
+    translate: 0q -3q;
+  }
+  &::before {
+    content: target-counter(attr(data-ref), page);
+  }
+}
+
+.content-table-story {
+  column-gap: 12q;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+}
+
+.content-table-story-number {
+  font-size: 36q;
+  font-family: $special-font-family;
+  color: $dark-color;
+}
+
+.content-table-story-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-table-story-title-fennese {
+  padding-inline-start: 4q;
+  font-size: 24q;
+  font-family: $special-font-family;
+  font-weight: 700;
+}
+
+.content-table-story-title-japanese {
+  margin-block-start: 8q;
+  padding-block-start: 6q;
+  padding-inline-start: 4q;
+  font-size: 14q;
+  font-weight: 700;
+  border-block-start: $border-width solid oklch(from $dark-color l c h / 0.5);
+}
+
+.content-table-plain {
+  column-gap: 12q;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  &::after {
+    border-block-start: $border-width solid oklch(from $dark-color l c h / 0.5);
+    content: "";
+  }
+}
+
+.content-table-plain-content {
+  font-size: 16q;
+  font-weight: 700;
+}

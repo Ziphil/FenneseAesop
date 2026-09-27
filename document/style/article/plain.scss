@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.plain {
+  break-before: page;
+  page: plain;
+}
+
+.plain-heading {
+  width: 50%;
+  height: 40q;
+  margin-inline: auto;
+  margin-block-end: 40q;
+  font-size: 20q;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  &::before {
+    inset: 0q;
+    background-color: $dark-color;
+    position: absolute;
+    transform: skew($skew-degree, 0deg);
+    z-index: -1;
+    content: "";
+  }
+}

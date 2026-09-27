@@ -57,24 +57,3 @@
   font-weight: 700;
   border-block-start: $border-width solid oklch(from white l c h / 0.5);
 }
-
-.page[data-article="story"] {
-  &[data-position="left"] {
-    position: running(story-left);
-  }
-  &[data-position="right"] {
-    position: running(story-right);
-  }
-}
-
-@page story:left {
-  @bottom-left {
-    content: element(story-left);
-  }
-}
-
-@page story:right {
-  @bottom-right {
-    content: element(story-right);
-  }
-}
