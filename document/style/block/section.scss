@@ -5,8 +5,10 @@
 
 
 .section {
-  break-before: page;
   margin-block-end: 24q;
+  &:not([data-no-break]) {
+    break-before: page;
+  }
 }
 
 .section-title {

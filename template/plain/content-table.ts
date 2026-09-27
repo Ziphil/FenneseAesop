@@ -20,6 +20,7 @@ manager.registerElementRule("content-table", "plain", (transformer, document, el
         const headingJapaneseElement = articleElement.searchXpath("heading/ja")[0] as Element;
         self.appendElement("li", (self) => {
           self.addClassName("content-table-item");
+          self.setAttribute("data-type", "story");
           self.appendElement("div", (self) => {
             self.addClassName("content-table-story");
             self.appendElement("div", (self) => {
@@ -48,6 +49,7 @@ manager.registerElementRule("content-table", "plain", (transformer, document, el
         const headingElement = articleElement.searchXpath("heading")[0] as Element;
         self.appendElement("li", (self) => {
           self.addClassName("content-table-item");
+          self.setAttribute("data-type", "plain");
           self.appendElement("div", (self) => {
             self.addClassName("content-table-plain");
             self.appendElement("div", (self) => {

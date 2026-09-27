@@ -23,13 +23,13 @@
 
 .text-fennese .text-paragraph {
   &:not(:first-child) {
-    margin-block-start: 6q;
+    margin-block-start: 8q;
   }
 }
 
 .text-japanese {
   margin-block-start: 12q;
-  padding-block-start: 10q;
+  padding-block-start: 12q;
   font-size: 12q;
   font-weight: 500;
   line-height: $line-height;
@@ -39,6 +39,6 @@
 
 .text-japanese .text-paragraph {
   &:not(:first-child) {
-    margin-block-start: 6q;
+    margin-block-start: 8q;
   }
 }

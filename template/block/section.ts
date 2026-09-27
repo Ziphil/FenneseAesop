@@ -5,10 +5,13 @@ import {VivliostyleTemplateManager} from "@zenml/vivliostyle";
 
 const manager = new VivliostyleTemplateManager();
 
-manager.registerElementRule("section", "explanation", (transformer, document, element) => {
+manager.registerElementRule("section", ["explanation", "plain"], (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("section", (self) => {
     self.addClassName("section");
+    if (element.hasAttribute("nobr")) {
+      self.setAttribute("data-no-break", "");
+    }
     self.appendChild(transformer.apply(element, "section"));
   });
   return self;

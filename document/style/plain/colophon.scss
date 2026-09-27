@@ -31,7 +31,9 @@
   width: 75%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content max-content;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .colophon-version-date {
@@ -46,8 +48,9 @@
   margin-block-start: 16q;
   row-gap: 12q;
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content max-content;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .colophon-author-type {

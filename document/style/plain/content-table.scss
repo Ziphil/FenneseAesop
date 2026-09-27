@@ -5,7 +5,6 @@
 
 
 .content-table {
-  row-gap: 28q;
   display: grid;
   grid-template-columns: 1fr 28q;
 }
@@ -15,6 +14,12 @@
   grid-column: 1 / -1;
   grid-template-columns: subgrid;
   align-items: center;
+  &:not(:first-child) {
+    margin-block-start: 24q;
+  }
+  &[data-type="plain"] +&[data-type="plain"] {
+    margin-block-start: 12q;
+  }
 }
 
 .content-table-page {
@@ -81,6 +86,6 @@
 }
 
 .content-table-plain-content {
-  font-size: 16q;
+  font-size: 14q;
   font-weight: 700;
 }
