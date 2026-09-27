@@ -33,6 +33,7 @@
     "@types/command-line-args": "^5.2.0",
     "@types/dot": "^1.1.5",
     "@types/glob": "^7.2.0",
+    "@types/node": "^20.19.43",
     "@types/sass": "^1.43.1",
     "@types/source-map-support": "^0.5.4",
     "@types/webpack": "^5.28.0",
@@ -56,7 +57,7 @@
     "ts-loader": "^9.2.6",
     "ts-node": "^10.3.0",
     "ts-node-dev": "^1.1.8",
-    "typescript": "^4.5.4",
+    "typescript": "^5.9.3",
     "webpack-cli": "^4.9.1",
     "webpack-node-externals": "^3.0.0",
     "webpack-shell-plugin-next": "^2.2.2",
@@ -64,7 +65,7 @@
   },
   "dependencies": {
     "@typescript/lib-dom": "npm:@zenml/xmldom-type",
-    "@vivliostyle/cli": "^8.15.0",
+    "@vivliostyle/cli": "^11.3.3",
     "@zenml/vivliostyle": "^0.1.0",
     "@zenml/xmldom": "^1.0.0",
     "@zenml/zenml": "^1.1.0",
@@ -80,5 +81,8 @@
     "source-map-support": "^0.5.21",
     "soxsot": "^0.9.0",
     "webpack": "^5.66.0"
+  },
+  "volta": {
+    "node": "22.23.2"
   }
 }
