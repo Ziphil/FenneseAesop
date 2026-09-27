@@ -36,7 +36,7 @@ manager.registerElementRule("u", true, (transformer, document, element) => {
   return self;
 });
 
-const GENERAL_DIACRITICS = new Map([["a", "ˊ"], ["g", "ˋ"], ["c", "ˆ"]]);
+const GENERAL_DIACRITICS = new Map([["a", "ˊ"], ["g", "`"], ["c", "ˆ"]]);
 
 manager.registerElementRule("d", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();

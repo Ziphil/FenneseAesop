@@ -38,6 +38,7 @@
     width: 100%;
     text-align: center;
     position: absolute;
+    line-height: 1;
     &[data-position="above"] {
       inset-block-start: 0.175em;
       inset-inline-start: 0em;

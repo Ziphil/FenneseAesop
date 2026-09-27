@@ -1,0 +1,29 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\blank|id="colophon"|<
+
+  \player<
+    Изор кок \d|t="g"|<и> лекитташ д\d|t="g"|<о>ччалув локдитташос\br;
+    \d|t="a"|<и> тазиӈ ицца лофжучлос.
+  >
+
+  \colophon<
+    \title<イソップ寓話で学ぶフェンナ語>
+    \vl<
+      \li<\vd<2026 年 10 月 30 日>\ve<第 1 版発行>>
+    >
+    \al<
+      \li<\at<著者>\ad<
+        \name<Ziphil Shaleiras>
+        \info<ziphil.shaleiras@gmail.com>
+        \info<https:`/`/ziphil.com>
+      >>
+      \li<\at<印刷所>\ad<
+        \name<XXXXX>
+      >>
+    >
+  >
+
+>

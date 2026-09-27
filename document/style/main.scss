@@ -12,8 +12,9 @@
 @use "block/paragraph.scss";
 @use "block/description-list.scss";
 @use "block/normal-table.scss";
-@use "block/content-table.scss";
-@use "block/first.scss";
+@use "plain/content-table.scss";
+@use "plain/first.scss";
+@use "plain/colophon.scss";
 @use "inline/common.scss";
 @use "inline/basic.scss";
 @use "inline/misc.scss";

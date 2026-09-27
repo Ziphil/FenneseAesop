@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.colophon {
+  float-reference: page;
+  float: block-end;
+}
+
+.colophon-inner {
+  width: 62.5%;
+  margin-inline: auto;
+}
+
+.colophon-title {
+  margin-block-end: 12q;
+  font-size: 16q;
+  font-weight: 700;
+  text-align: center;
+}
+
+.colophon-main {
+  padding-block: 12q;
+  border-block-start: solid $border-width $dark-color;
+  border-block-end: solid $border-width $dark-color;
+}
+
+.colophon-version-list {
+  width: 75%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.colophon-version-date {
+  text-align: start;
+}
+
+.colophon-version-edition {
+  text-align: end;
+}
+
+.colophon-author-list {
+  margin-block-start: 16q;
+  row-gap: 12q;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: baseline;
+}
+
+.colophon-author-type {
+  font-size: 11q;
+  text-align: start;
+}
+
+.colophon-author-detail {
+  row-gap: 8q;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+.colophon-author-name {
+  font-size: 14q;
+  font-weight: 700;
+}
+
+.colophon-author-info {
+  font-size: 11q;
+}
+
+.colophon-caution {
+  margin-block-start: 10q;
+  font-size: 11q;
+  line-height: 1.375;
+  text-align: justify;
+}
+
+.player {
+  font-size: 16q;
+  font-family: $special-font-family;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.375;
+  letter-spacing: 0.05em;
+}
