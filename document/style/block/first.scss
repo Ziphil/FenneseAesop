@@ -4,21 +4,29 @@
 @use "sass:math" as *;
 
 
-.title {
-  margin-block-start: 256q;
+.first {
+  width: 100%;
+  height: $page-height - $page-margin-top - $page-margin-bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-title {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.title-fennese {
+.first-title-fennese {
   row-gap: 8q;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.title-fennese-row {
+.first-title-fennese-row {
   font-family: $special-font-family;
   font-weight: 700;
   text-transform: uppercase;
@@ -34,16 +42,16 @@
   }
 }
 
-.title-japanese {
-  margin-block-start: 24q;
+.first-title-japanese {
+  margin-block-start: 32q;
   font-size: 18q;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-indent: 0.2em;
  }
 
-.author {
-  margin-block-start: 128q;
+.first-author {
+  margin-block-start: 96q;
   font-size: 14q;
   font-weight: 500;
   display: flex;

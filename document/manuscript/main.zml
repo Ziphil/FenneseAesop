@@ -4,7 +4,7 @@
 
 \root<
 
-  &import|src="document/manuscript/plain/title.zml"|;
+  &import|src="document/manuscript/plain/first.zml"|;
 
   \blank;
   &import|src="document/manuscript/plain/content-table.zml"|;

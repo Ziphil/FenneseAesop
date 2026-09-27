@@ -5,47 +5,56 @@ import {VivliostyleTemplateManager} from "@zenml/vivliostyle";
 
 const manager = new VivliostyleTemplateManager();
 
-manager.registerElementRule("title", "blank", (transformer, document, element) => {
+manager.registerElementRule("first", "blank", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
-    self.addClassName("title");
-    self.appendChild(transformer.apply(element, "title"));
+    self.addClassName("first");
+    self.appendChild(transformer.apply(element, "first"));
   });
   return self;
 });
 
-manager.registerElementRule("sh", "title", (transformer, document, element) => {
+manager.registerElementRule("title", "first", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
-    self.addClassName("title-fennese");
-    self.appendChild(transformer.apply(element, "title.sh"));
+    self.addClassName("first-title");
+    self.appendChild(transformer.apply(element, "first.title"));
   });
   return self;
 });
 
-manager.registerElementRule("row", "title.sh", (transformer, document, element) => {
+manager.registerElementRule("sh", "first.title", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
-    self.addClassName("title-fennese-row");
-    self.appendChild(transformer.apply(element, "title"));
+    self.addClassName("first-title-fennese");
+    self.appendChild(transformer.apply(element, "first.title.sh"));
   });
   return self;
 });
 
-manager.registerElementRule("ja", "title", (transformer, document, element) => {
+manager.registerElementRule("row", "first.title.sh", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
-    self.addClassName("title-japanese");
-    self.appendChild(transformer.apply(element, "title"));
+    self.addClassName("first-title-fennese-row");
+    self.appendChild(transformer.apply(element, "section"));
   });
   return self;
 });
 
-manager.registerElementRule("author", "blank", (transformer, document, element) => {
+manager.registerElementRule("ja", "first.title", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("div", (self) => {
-    self.addClassName("author");
-    self.appendChild(transformer.apply(element, "author"));
+    self.addClassName("first-title-japanese");
+    self.appendChild(transformer.apply(element, "section"));
+  });
+  return self;
+});
+
+manager.registerElementRule("author", "first", (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  self.appendElement("div", (self) => {
+    self.addClassName("first-author");
+    self.appendChild(transformer.apply(element, "section"));
   });
   return self;
 });
