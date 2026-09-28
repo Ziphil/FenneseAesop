@@ -14,12 +14,14 @@ manager.registerElementRule("content-table", "plain", (transformer, document, el
       const articleElement = articleElements[i];
       const prevArticleElement = articleElements[i - 1];
       const name = articleElement.tagName;
+      const id = articleElement.getAttribute("id");
       if (name === "story") {
         const number = articleElement.searchXpath("preceding-sibling::story").length + 1;
         const headingFenneseElement = articleElement.searchXpath("heading/sh")[0] as Element;
         const headingJapaneseElement = articleElement.searchXpath("heading/ja")[0] as Element;
-        self.appendElement("li", (self) => {
+        self.appendElement("a", (self) => {
           self.addClassName("content-table-item");
+          self.setAttribute("href", "#" + id);
           self.setAttribute("data-type", "story");
           self.appendElement("div", (self) => {
             self.addClassName("content-table-story");
@@ -47,8 +49,9 @@ manager.registerElementRule("content-table", "plain", (transformer, document, el
         });
       } else if (name === "plain") {
         const headingElement = articleElement.searchXpath("heading")[0] as Element;
-        self.appendElement("li", (self) => {
+        self.appendElement("a", (self) => {
           self.addClassName("content-table-item");
+          self.setAttribute("href", "#" + id);
           self.setAttribute("data-type", "plain");
           self.appendElement("div", (self) => {
             self.addClassName("content-table-plain");
