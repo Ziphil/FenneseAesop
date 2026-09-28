@@ -8,4 +8,7 @@
   margin-block: 8q;
   line-height: $line-height;
   text-align: justify;
+  &[data-center] {
+    text-align: center;
+  }
 }

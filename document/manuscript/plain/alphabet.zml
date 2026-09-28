@@ -1,0 +1,43 @@
+\zml?|version="1.1"|;
+\xml?|version="1.0",encoding="UTF-8"|;
+
+
+\plain|id="alphabet"|<
+  \heading<アルファベット>
+
+  \section|nobr|<
+    \p<
+      フェンナ語は以下の 26 個から成るキリル文字を用いて表記されます。
+      文字と発音の対応は 1 対 1 で、基本的に文字ごとに定まった音通りに読めば正しい発音になります。
+    >
+    \al<
+      \li<\lt<К к>\prs<`/k`/>\pre<カ行>>
+      \li<\lt<Г г>\prs<`/ɡ`/>\pre<>>
+      \li<\lt<Х х>\prs<`/χ`/>\pre<>>
+      \li<\lt<Ҕ ҕ>\prs<`/ʁ`/>\pre<>>
+      \li<\lt<Т т>\prs<`/t`/>\pre<>>
+      \li<\lt<Д д>\prs<`/d`/>\pre<>>
+      \li<\lt<С с>\prs<`/s`/>\pre<>>
+      \li<\lt<З з>\prs<`/z`/>\pre<>>
+      \li<\lt<П п>\prs<`/p`/>\pre<>>
+      \li<\lt<Б б>\prs<`/b`/>\pre<>>
+      \li<\lt<Ф ф>\prs<`/f`/>\pre<>>
+      \li<\lt<В в>\prs<`/v`/>\pre<>>
+      \li<\lt<Ш ш>\prs<`/ʃ`/>\pre<>>
+      \li<\lt<Ж ж>\prs<`/ʒ`/>\pre<>>
+      \li<\lt<Ц ц>\prs<`/t͡s`/>\pre<>>
+      \li<\lt<Ч ч>\prs<`/t͡ʃ`/>\pre<>>
+      \li<\lt<Ӈ ӈ>\prs<`/ŋ`/>\pre<>>
+      \li<\lt<Н н>\prs<`/n`/>\pre<>>
+      \li<\lt<М м>\prs<`/m`/>\pre<>>
+      \li<\lt<Л л>\prs<`/l`/>\pre<>>
+      \li<\lt<Р р>\prs<`/r`/>\pre<>>
+      \li<\lt<Е е>\prs<`/e`/>\pre<>>
+      \li<\lt<И и>\prs<`/i`/>\pre<>>
+      \li<\lt<О о>\prs<`/o`/>\pre<>>
+      \li<\lt<У у>\prs<`/u`/>\pre<>>
+      \li<\lt<А а>\prs<`/a`/>\pre<>>
+    >
+  >
+
+>

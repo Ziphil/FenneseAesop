@@ -53,9 +53,31 @@
   flex-direction: column;
 }
 
+.gloss-explanation-word {
+  line-height: 1;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.gloss-explanation-item {
+  &::before {
+    margin-inline-start: 12q;
+    margin-inline-end: 4q;
+    font-size: 10q;
+    font-family: "源ノ明朝", serif;
+    color: $dark-color;
+    content: "…";
+  }
+}
+
 .gloss-spelling {
   font-size: 14q;
   font-weight: 500;
+}
+
+.gloss-explanation-spelling {
+  margin-block-start: 2q;
+  font-size: 12q;
 }
 
 .gloss-pronunciation {
@@ -64,16 +86,31 @@
   @include condensed(0.8125);
 }
 
+.gloss-explanation-pronunciation {
+  margin-block-start: 6q;
+  font-size: 11q;
+}
+
 .gloss-category {
   margin-block-start: 7q;
   --font-size: 10q;
   @include condensed(0.8125);
 }
 
+.gloss-explanation-category {
+  margin-block-start: 7q;
+  font-size: 10q;
+}
+
 .gloss-annotation {
   margin-block-start: 4q;
   --font-size: 10q;
   @include condensed(0.8125);
+}
+
+.gloss-explanation-annotation {
+  margin-block-start: 4q;
+  font-size: 10q;
 }
 
 .gloss-annotation-separator {
@@ -85,4 +122,16 @@
   margin-block-start: 7q;
   font-size: 12q;
   font-weight: 500;
+}
+
+.gloss-explanation-japanese {
+  margin-block-start: 7q;
+  font-size: 12q;
+}
+
+.gloss-figure {
+  margin-block: 8q;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
