@@ -19,23 +19,6 @@ manager.registerElementRule("ch", true, (transformer, document, element) => {
   return self;
 });
 
-manager.registerElementRule("hs", true, (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendElement("span", (self) => {
-    self.addClassName("half-space");
-  });
-  return self;
-});
-
-manager.registerElementRule("u", true, (transformer, document, element) => {
-  const self = document.createDocumentFragment();
-  self.appendElement("em", (self) => {
-    self.addClassName("underline");
-    self.appendChild(transformer.apply(element));
-  });
-  return self;
-});
-
 const GENERAL_DIACRITICS = new Map([["a", "ˊ"], ["g", "`"], ["c", "ˆ"]]);
 
 manager.registerElementRule("d", true, (transformer, document, element) => {

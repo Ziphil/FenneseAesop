@@ -4,7 +4,7 @@
 @use "sass:math" as *;
 
 
-.box {
+.sentence-reference {
   width: 1.125em;
   height: 1.125em;
   margin-inline: 0.125em;
@@ -18,7 +18,14 @@
   justify-content: center;
 }
 
-.box-inner {
+.sentence-reference-inner {
   font-size: 11q;
   font-family: $special-font-family;
+}
+
+.story-reference {
+   font-size: 13q;
+   font-family: $special-font-family;
+   color: $dark-color;
+   line-height: 1;
 }

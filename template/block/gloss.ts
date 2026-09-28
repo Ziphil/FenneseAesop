@@ -23,7 +23,7 @@ manager.registerElementRule("ja", "sentence", (transformer, document, element) =
   return self;
 });
 
-manager.registerElementRule("supl", "sentence", (transformer, document, element) => {
+manager.registerElementRule("supp", "sentence", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("p", (self) => {
     self.addClassName("sentence-supplement");
