@@ -9,13 +9,10 @@
   page: blank;
 }
 
-@page blank:left {
+@page blank {
   @bottom-left {
     content: none;
   }
-}
-
-@page blank:right {
   @bottom-right {
     content: none;
   }

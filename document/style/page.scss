@@ -28,6 +28,10 @@
   }
 }
 
+@page :first {
+  counter-set: page 0;
+}
+
 html {
   font-size: 12q;
   font-family: $serif-font-family;
