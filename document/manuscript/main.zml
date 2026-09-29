@@ -26,6 +26,9 @@
   ## &import|src="document/manuscript/story/dog-reflection.zml"|;
   ## &import|src="document/manuscript/explanation/dog-reflection.zml"|;
 
+  &import|src="document/manuscript/plain/inflection.zml"|;
+
+  \blank;
   &import|src="document/manuscript/plain/colophon.zml"|;
 
 >

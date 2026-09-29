@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.inflection-table {
+  margin-block: 8q;
+  margin-inline-start: 50%;
+  translate: -50%;
+  line-height: $small-line-height;
+  border-collapse: collapse;
+  border-block-end: solid $border-width $dark-color;
+}
+
+.inflection-table th,
+.inflection-table td {
+  padding-inline: 6q;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.inflection-table thead {
+  border-block-end: solid $border-width $dark-color;
+}
+
+.inflection-table tr {
+  &[data-border] {
+    border-block-start: dashed $border-width $dark-color;
+  }
+}
+
+.inflection-table-heading-fennese {
+  font-size: 12q;
+  font-weight: 700;
+}
+
+.inflection-table-heading-japanese {
+  margin-block-end: 4q;
+  font-size: 11q;
+}
+
+.inflection-table-annotation {
+  line-height: 1.5;
+  &:first-child {
+    padding-inline-end: 12q !important;
+  }
+}
+
+.inflection-table-annotation-inner {
+  --font-size: 10q;
+  @include condensed(0.8125);
+}
+
+.inflection-table-form {
+  letter-spacing: -0.025em;
+}

@@ -33,7 +33,7 @@ $special-font-family: "Ysabeau";
 $skew-degree: -9deg;
 
 
-@mixin condensed($ratio) {
+@mixin condensed($ratio, $fix-line-height: true) {
   font-size: calc(var(--font-size) * #{$ratio});
   line-height: calc(var(--font-size));
   scale: 1 div(1, $ratio);

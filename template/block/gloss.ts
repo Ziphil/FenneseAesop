@@ -85,7 +85,7 @@ manager.registerElementRule("an", "sentence.gloss.li", (transformer, document, e
     for (const part of splitParts) {
       self.appendElement("span", (self) => {
         if (part === "·" || part === ".") {
-          self.addClassName("gloss-annotation-separator");
+          self.addClassName("annotation-separator");
         }
         self.appendTextNode(part);
       });

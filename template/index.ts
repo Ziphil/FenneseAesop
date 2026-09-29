@@ -7,6 +7,7 @@ import articleLessonManager from "./article/story";
 import blockAlphabetListManager from "./block/alphabet-list";
 import blockDescriptionListManager from "./block/description-list";
 import blockGlossManager from "./block/gloss";
+import blockInflectionTableManager from "./block/inflection-table";
 import blockMiscManager from "./block/misc";
 import blockNormalTableManager from "./block/normal-table";
 import blockParagraphManager from "./block/paragraph";
@@ -36,6 +37,7 @@ const managers = [
   blockDescriptionListManager,
   blockNormalTableManager,
   blockAlphabetListManager,
+  blockInflectionTableManager,
   blockMiscManager,
   plainContentTableManager,
   plainTitleManager,
