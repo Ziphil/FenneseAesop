@@ -7,36 +7,50 @@
 
   \section|nobr|<
     \p<
-      フェンナ語は以下の 26 個から成るキリル文字を用いて表記されます。
+      フェンナ語は以下の 26 個から成るキリル文字体系を用いて表記されます。
       文字と発音の対応は 1 対 1 で、基本的に文字ごとに定まった音通りに読めば正しい発音になります。
     >
     \al<
-      \li<\lt<К к>\prs<`/k`/>\pre<カ行>>
-      \li<\lt<Г г>\prs<`/ɡ`/>\pre<>>
-      \li<\lt<Х х>\prs<`/χ`/>\pre<>>
-      \li<\lt<Ҕ ҕ>\prs<`/ʁ`/>\pre<>>
-      \li<\lt<Т т>\prs<`/t`/>\pre<>>
-      \li<\lt<Д д>\prs<`/d`/>\pre<>>
-      \li<\lt<С с>\prs<`/s`/>\pre<>>
-      \li<\lt<З з>\prs<`/z`/>\pre<>>
-      \li<\lt<П п>\prs<`/p`/>\pre<>>
-      \li<\lt<Б б>\prs<`/b`/>\pre<>>
-      \li<\lt<Ф ф>\prs<`/f`/>\pre<>>
-      \li<\lt<В в>\prs<`/v`/>\pre<>>
-      \li<\lt<Ш ш>\prs<`/ʃ`/>\pre<>>
-      \li<\lt<Ж ж>\prs<`/ʒ`/>\pre<>>
-      \li<\lt<Ц ц>\prs<`/t͡s`/>\pre<>>
-      \li<\lt<Ч ч>\prs<`/t͡ʃ`/>\pre<>>
-      \li<\lt<Ӈ ӈ>\prs<`/ŋ`/>\pre<>>
-      \li<\lt<Н н>\prs<`/n`/>\pre<>>
-      \li<\lt<М м>\prs<`/m`/>\pre<>>
-      \li<\lt<Л л>\prs<`/l`/>\pre<>>
-      \li<\lt<Р р>\prs<`/r`/>\pre<>>
-      \li<\lt<Е е>\prs<`/e`/>\pre<>>
-      \li<\lt<И и>\prs<`/i`/>\pre<>>
-      \li<\lt<О о>\prs<`/o`/>\pre<>>
-      \li<\lt<У у>\prs<`/u`/>\pre<>>
-      \li<\lt<А а>\prs<`/a`/>\pre<>>
+      \li<\ltc<{К}>\lts<{к}>\prs<`/k`/>\pre<カ行>>
+      \li<\ltc<{Г}>\lts<{г}>\prs<`/ɡ`/>\pre<ガ行>>
+      \li<\ltc<{Х}>\lts<{х}>\prs<`/χ`/>\pre<喉の奥で擦る清音>>
+      \li<\ltc<{Ҕ}>\lts<{ҕ}>\prs<`/ʁ`/>\pre<喉の奥で擦る濁音>>
+      \li<\ltc<{Т}>\lts<{т}>\prs<`/t`/>\pre<タ行>>
+      \li<\ltc<{Д}>\lts<{д}>\prs<`/d`/>\pre<ダ行>>
+      \li<\ltc<{С}>\lts<{с}>\prs<`/s`/>\pre<サ行>>
+      \li<\ltc<{З}>\lts<{з}>\prs<`/z`/>\pre<ザ行>>
+      \li<\ltc<{П}>\lts<{п}>\prs<`/p`/>\pre<パ行>>
+      \li<\ltc<{Б}>\lts<{б}>\prs<`/b`/>\pre<バ行>>
+      \li<\ltc<{Ф}>\lts<{ф}>\prs<`/f`/>\pre<ファ行>>
+      \li<\ltc<{В}>\lts<{в}>\prs<`/v`/>\pre<ヴァ行>>
+      \li<\ltc<{Ш}>\lts<{ш}>\prs<`/ʃ`/>\pre<シャ行>>
+      \li<\ltc<{Ж}>\lts<{ж}>\prs<`/ʒ`/>\pre<ジャ行>>
+      \li<\ltc<{Ц}>\lts<{ц}>\prs<`/t͡s`/>\pre<ツァ行>>
+      \li<\ltc<{Ч}>\lts<{ч}>\prs<`/t͡ʃ`/>\pre<チャ行>>
+      \li<\ltc<{Ӈ}>\lts<{ӈ}>\prs<`/ŋ`/>\pre<鼻濁音のガ行>>
+      \li<\ltc<{Н}>\lts<{н}>\prs<`/n`/>\pre<ナ行>>
+      \li<\ltc<{М}>\lts<{м}>\prs<`/m`/>\pre<マ行>>
+      \li<\ltc<{Л}>\lts<{л}>\prs<`/l`/>\pre<英語の L の音>>
+      \li<\ltc<{Р}>\lts<{р}>\prs<`/ɾ`/>\pre<ラ行>>
+      \li<\ltc<{Е}>\lts<{е}>\prs<`/e`/>\pre<エ段>>
+      \li<\ltc<{И}>\lts<{и}>\prs<`/i`/>\pre<イ段>>
+      \li<\ltc<{О}>\lts<{о}>\prs<`/o`/>\pre<オ段>>
+      \li<\ltc<{У}>\lts<{у}>\prs<`/u`/>\pre<ウ段>>
+      \li<\ltc<{А}>\lts<{а}>\prs<`/a`/>\pre<ア段>>
+    >    
+    \p<
+      また、母音字の上にはアクセント記号が付くことがあります。
+      アクセント記号は 3 種類あり、強勢 (強く読むかどうか) の有無や母音の長短を表します。
+    >
+    \table<
+      \tr<\th<記号>\th<強勢>\th<長短>>
+      \tr<\td<\ddem|t="c"|;>\td<あり (強く読む)>\td<長い>>
+      \tr<\td<\ddem|t="g"|;>\td<なし>\td<長い>>
+      \tr<\td<\ddem|t="a"|;>\td<なし>\td<短い (通常)>>
+    >
+    \p<
+      例えば {ледо̀ҕаллу̂зрес} は、[о] と [у] を他の母音より長く読み、さらに [у] はより強めに読みます。
+      また {и́} は、アクセント記号のない {и} と全く同じ発音です。
     >
   >
 

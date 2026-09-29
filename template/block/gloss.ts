@@ -103,16 +103,16 @@ manager.registerElementRule("glfigure", "section", (transformer, document, eleme
   return self;
 });
 
-manager.registerElementRule("ex", "section.glfigure", (transformer, document, element) => {
+manager.registerElementRule("lix", "section.glfigure", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("span", (self) => {
     self.addClassName("gloss-explanation-word");
-    self.appendChild(transformer.apply(element, "section.glfigure.ex"));
+    self.appendChild(transformer.apply(element, "section.glfigure.lix"));
   });
   return self;
 });
 
-manager.registerElementRule(["sh", "pr", "ct", "an", "ja"], "section.glfigure.ex", (transformer, document, element) => {
+manager.registerElementRule(["sh", "pr", "ct", "an", "ja"], "section.glfigure.lix", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const [, className] = GLOSS_CLASS_NAMES.get(element.tagName) ?? ["", ""];
   self.appendElement("span", (self) => {

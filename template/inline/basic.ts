@@ -23,7 +23,7 @@ const GENERAL_DIACRITICS = new Map([["a", "ˊ"], ["g", "`"], ["c", "ˆ"]]);
 
 manager.registerElementRule("d", true, (transformer, document, element) => {
   const self = document.createDocumentFragment();
-  const type = (element.getAttribute("g") || element.getAttribute("t")) ?? "";
+  const type = element.getAttribute("t") ?? "";
   self.appendElement("span", (self) => {
     self.addClassName("diacritic");
     self.appendElement("span", (self) => {
@@ -33,6 +33,26 @@ manager.registerElementRule("d", true, (transformer, document, element) => {
     if (element.hasAttribute("t")) {
       self.appendElement("span", (self) => {
         self.addClassName("diacritic-mark");
+        self.setAttribute("data-position", "above");
+        self.appendTextNode(GENERAL_DIACRITICS.get(type) ?? "");
+      });
+    }
+  });
+  return self;
+});
+
+manager.registerElementRule("ddem", true, (transformer, document, element) => {
+  const self = document.createDocumentFragment();
+  const type = element.getAttribute("t") ?? "";
+  self.appendElement("span", (self) => {
+    self.addClassName("diacritic-demonstration");
+    self.appendElement("span", (self) => {
+      self.addClassName("diacritic-demonstration-char");
+      self.appendTextNode("◌");
+    });
+    if (element.hasAttribute("t")) {
+      self.appendElement("span", (self) => {
+        self.addClassName("diacritic-demonstration-mark");
         self.setAttribute("data-position", "above");
         self.appendTextNode(GENERAL_DIACRITICS.get(type) ?? "");
       });

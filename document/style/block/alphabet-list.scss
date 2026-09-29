@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@use "../variable.scss" as *;
+@use "sass:math" as *;
+
+
+.alphabet-list {
+  margin-block: 12q;
+  column-gap: 24q;
+  margin-inline: auto;
+  width: fit-content;
+  line-height: $line-height;
+  border-block-start: solid $border-width $dark-color;
+  border-block-end: solid $border-width $dark-color;
+  display: grid;
+  grid-template-columns: repeat(2, max-content max-content max-content max-content);
+  break-inside: avoid;
+}
+
+.alphabet-item {
+  column-gap: 0q;
+  display: grid;
+  grid-column: span 4;
+  grid-template-columns: subgrid;
+  align-items: baseline;
+}
+
+.alphabet-letter-capital {
+  padding-inline-start: 8q;
+  font-size: 16q;
+  font-weight: 700;
+  text-align: center;
+}
+
+.alphabet-letter-small {
+  padding-inline-start: 2q;
+  padding-inline-end: 8q;
+  font-size: 16q;
+  font-weight: 700;
+  text-align: center;
+}
+
+.alphabet-pronunciation {
+  padding-inline: 8q;
+  text-align: center;
+}
+
+.alphabet-explanation {
+  padding-inline: 8q;
+}

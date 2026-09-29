@@ -48,3 +48,23 @@
     }
   }
 }
+
+.diacritic-demonstration {
+  font-size: 20q;
+  font-weight: 700;
+  position: relative;
+  line-height: 1.25;
+  >.diacritic-demonstration-char {
+    color: $pale-dark-color;
+  }
+  >.diacritic-demonstration-mark {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    line-height: 1;
+    &[data-position="above"] {
+      inset-block-start: 0.175em;
+      inset-inline-start: 0em;
+    }
+  }
+}

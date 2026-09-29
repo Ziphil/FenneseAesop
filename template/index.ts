@@ -4,6 +4,7 @@ import articleBlankManager from "./article/blank";
 import articleExplanationManager from "./article/explanation";
 import articlePlainManager from "./article/plain";
 import articleLessonManager from "./article/story";
+import blockAlphabetListManager from "./block/alphabet-list";
 import blockDescriptionListManager from "./block/description-list";
 import blockGlossManager from "./block/gloss";
 import blockMiscManager from "./block/misc";
@@ -34,6 +35,7 @@ const managers = [
   blockParagraphManager,
   blockDescriptionListManager,
   blockNormalTableManager,
+  blockAlphabetListManager,
   blockMiscManager,
   plainContentTableManager,
   plainTitleManager,
