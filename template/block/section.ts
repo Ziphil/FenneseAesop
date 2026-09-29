@@ -17,7 +17,7 @@ manager.registerElementRule("section", ["explanation", "plain"], (transformer, d
   return self;
 });
 
-manager.registerElementRule("title", "section", (transformer, document, element) => {
+manager.registerElementRule("heading", "section", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const number = element.parentNode!.searchXpath("preceding-sibling::section").length + 1;
   self.appendElement("h2", (self) => {
