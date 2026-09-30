@@ -22,9 +22,6 @@
 
   &import|src="document/manuscript/story/north-wind-sun.zml"|;
   &import|src="document/manuscript/explanation/north-wind-sun.zml"|;
-  
-  ## &import|src="document/manuscript/story/dog-reflection.zml"|;
-  ## &import|src="document/manuscript/explanation/dog-reflection.zml"|;
 
   &import|src="document/manuscript/plain/inflection.zml"|;
 
