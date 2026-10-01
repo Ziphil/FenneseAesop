@@ -8,6 +8,7 @@ const manager = new VivliostyleTemplateManager();
 manager.registerElementRule("colophon", "blank", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   const titleElement = element.searchXpath("title")[0] as Element;
+  const cautionElement = element.searchXpath("caution")[0] as Element;
   self.appendElement("aside", (self) => {
     self.addClassName("colophon");
     self.appendElement("div", (self) => {
@@ -22,7 +23,7 @@ manager.registerElementRule("colophon", "blank", (transformer, document, element
       });
       self.appendElement("p", (self) => {
         self.addClassName("colophon-caution");
-        self.appendTextNode("本書の無断での複製や転載は、著作権法上の例外を除き禁止されています。");
+        self.appendChild(transformer.apply(cautionElement, "section"));
       });
     });
   });
@@ -113,10 +114,10 @@ manager.registerElementRule("info", "colophon.al.li.ad", (transformer, document,
   return self;
 });
 
-manager.registerElementRule("player", "blank", (transformer, document, element) => {
+manager.registerElementRule("prayer", "blank", (transformer, document, element) => {
   const self = document.createDocumentFragment();
   self.appendElement("aside", (self) => {
-    self.addClassName("player");
+    self.addClassName("prayer");
     self.appendChild(transformer.apply(element, "section"));
   });
   return self;
